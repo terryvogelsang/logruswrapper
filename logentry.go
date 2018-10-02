@@ -21,7 +21,7 @@ var (
 // LogEntryInfos informations about log entry
 type LogEntryInfos struct {
 	LogID    string `json:"logID"`
-	Session  string `json:"session"`
+	Session  string `json:"session,omitempty"`
 	Service  string `json:"service"`
 	Endpoint string `json:"endpoint"`
 	Code     string `json:"code"`
@@ -31,7 +31,7 @@ type LogEntryInfos struct {
 // NewEntryWithSession return a LogEntryInfos struct instance with a session
 func NewEntryWithSession(session string, service string, endpoint string, code string) *LogEntryInfos {
 
-	uuid, _ := uuid.NewV4()
+	uuid := uuid.NewV4()
 
 	return &LogEntryInfos{
 		LogID:    uuid.String(),
@@ -46,7 +46,7 @@ func NewEntryWithSession(session string, service string, endpoint string, code s
 // NewEntry return a LogEntryInfos struct instance
 func NewEntry(service string, endpoint string, code string) *LogEntryInfos {
 
-	uuid, _ := uuid.NewV4()
+	uuid := uuid.NewV4()
 
 	return &LogEntryInfos{
 		LogID:    uuid.String(),

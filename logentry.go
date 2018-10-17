@@ -5,16 +5,20 @@ import (
 )
 
 const (
-	CodeSuccess      = "SUCCESS"
-	CodeBadLogin     = "BAD-LOGIN"
-	CodeInvalidToken = "INVALID-TOKEN"
+	CodeSuccess       = "SUCCESS"
+	CodeBadLogin      = "BAD-LOGIN"
+	CodeInvalidToken  = "INVALID-TOKEN"
+	CodeAlreadyExists = "ALREADY-EXISTS"
+	CodeInvalidJSON   = "INVALID-JSON"
 )
 
 var (
 	messageCodeMapping = map[string]string{
-		CodeBadLogin:     "Bad username or password",
-		CodeInvalidToken: "Invalid Token",
-		CodeSuccess:      "Success",
+		CodeBadLogin:      "Bad username or password",
+		CodeInvalidToken:  "Invalid Token",
+		CodeSuccess:       "Success",
+		CodeAlreadyExists: "Resource already exists",
+		CodeInvalidJSON:   "Invalid JSON Format",
 	}
 )
 

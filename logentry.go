@@ -6,6 +6,7 @@ import (
 
 const (
 	CodeSuccess       = "SUCCESS"
+	CodeUpdated       = "UPDATED"
 	CodeBadLogin      = "BAD-LOGIN"
 	CodeInvalidToken  = "INVALID-TOKEN"
 	CodeAlreadyExists = "ALREADY-EXISTS"
@@ -19,6 +20,7 @@ var (
 		CodeSuccess:       "Success",
 		CodeAlreadyExists: "Resource already exists",
 		CodeInvalidJSON:   "Invalid JSON Format",
+		CodeUpdated:       "Resource updated",
 	}
 )
 
